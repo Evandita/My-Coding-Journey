@@ -1,0 +1,4 @@
+program1.c: 20 out of 20 tests passed = 100.0%
+program2.c: 11 out of 20 tests passed = 55.00000000000001%
+program3.c: 9 out of 20 tests passed = 45.0%
+program4.c: 0 out of 20 tests passed = 0.0%
