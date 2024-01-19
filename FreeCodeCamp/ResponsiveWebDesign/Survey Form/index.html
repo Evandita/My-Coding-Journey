@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="header">
+            <h1 id="title">Asistant Digital Laboratory Survey Form</h1>
+            <p id="description">
+                Fill in the form below to provide your feedback regarding the Digital Laboratory Assistant's performance during the practicum.
+                All types of input will be evaluated and considered to reflect on our future work ethics.
+                Feel free to express your feelings towards us :D
+            </p>
+        </div>
+        <form id="survey-form">
+            <fieldset id="personal-information">
+                <legend>Personal Information</legend>
+                <label for="name" id="name-label"><p>Full Name:</p><input type="text" id="name" name="name" placeholder="Azure Bluewyn" required></label>
+                <label for="email" id="email-label"><p>Email:</p><input type="email" id="email" name="email" placeholder="ABlueWind@ui.ac.id" required></label>
+                <label for="npm" id="number-label"><p>NPM:</p><input type="number" id="number" name="npm" min="0" max="9999999999" placeholder="1234567890" required></label>
+                <label for="dropdown"><p>Major:</p>
+                    <select id="dropdown" name="major">
+                        <option value="1" id="computer-engineering">Computer Engineering</option>
+                        <option value="2" id="electrical-engineering">Electrical Engineering</option>
+                        <option value="3" id="biomedical-engineering">Biomedical Engineering</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset id="questions">
+                <legend>Questions</legend>
+                <p>1. How <b>sastified</b> are you with the current practicum program?</p>
+                <label for="very-satisfied"><input type="radio" name="satisfication" value="1" id="very-satisfied" checked>Very Satisfied</label>
+                <label for="satisfied"><input type="radio" name="satisfication" value="2" id="satisfied">Satisfied</label>
+                <label for="neutral"><input type="radio" name="satisfication" value="3" id="neutral">Neutral</label>
+                <label for="not-satisfied"><input type="radio" name="satisfication" value="4" id="not-satisfied">Not Satisfied</label>
+                <label for="dissapointed"><input type="radio" name="satisfication" value="5" id="dissapointed">Dissapointed</label>
+                <p>2. What practicum did you take?</p>
+                <label for="c-programming"><input type="checkbox" name="practicum-type" value="1" id="c-programming">C Programming</label>
+                <label for="digital-electronics"><input type="checkbox" name="practicum-type" value="2" id="digital-electronics">Digital Electronics</label>
+                <label for="advanced-c-programming"><input type="checkbox" name="practicum-type" value="3" id="advanced-c-programming">Advanced C Programming</label>
+                <p>3. Give your feedback!</p>
+                <label for="feedback"><textarea id="feedback" placeholder="It's so fun :D"></textarea></label>
+            </fieldset>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </body>
+</html>
