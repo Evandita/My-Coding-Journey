@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Judge - C Problem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+        #leftColumn {
+            width: 45%;
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        #rightColumn {
+            width: 50%;
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        #lineSeparator {
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            left: 0;
+            width: 2px;
+            background-color: #ccc;
+        }
+
+        #codeForm {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 100%; /* Added max-width to ensure the textarea stays inside the right column */
+            height: 250px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        #output {
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            white-space: pre-wrap;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            max-height: 150px; /* Adjust the maximum height as needed */
+        }
+
+        #outputTitle {
+            padding-left: 20px;
+        }
+
+        #outputText {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #submitBtn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="leftColumn">
+        <h2>Coding Problem</h2>
+        <p>Write a C program to...</p>
+        <!-- Add the problem description here -->
+    </div>
+
+    <div id="rightColumn">
+
+        <div id="codeForm">
+            <h2>Code Submission</h2>
+            <form action="#" method="post" onsubmit="submitCode(event)">
+                <label for="code">Your C Code:</label>
+                <textarea id="code" name="code" required></textarea>
+
+                <button id="submitBtn" type="submit">Submit Code</button>
+            </form>
+        </div>
+        <h2 id="outputTitle">Output</h2>
+        <div id="output">
+            
+            <pre id="outputText"></pre>
+        </div>
+    </div>
+
+    <script>
+        function submitCode(event) {
+            // Prevent the form from actually submitting (we'll handle it with JavaScript)
+            event.preventDefault();
+
+            // Get the user's code from the form
+            var userCode = document.getElementById("code").value;
+
+            // Send the userCode to the backend for execution and judging
+            // You would typically use AJAX to send the code to the server
+            // and receive the output.
+
+            // For the sake of this example, we'll just display a message.
+            var outputText = "Code submitted. Output will be shown here after judging.";
+
+            // Display the output
+            document.getElementById("outputText").textContent = outputText;
+        }
+    </script>
+</body>
+</html>
