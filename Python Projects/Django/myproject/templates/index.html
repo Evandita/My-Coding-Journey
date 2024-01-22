@@ -1,7 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>Word Counter</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
         <h1>Input your text below:</h1>
@@ -10,5 +13,16 @@
             <textarea name="text" rows="25" cols="100"></textarea><br>
             <input type="submit"/>
         </form>
+        <h1>Model Testing</h1>
+        {% for weapon in weapons %}
+        <p>Weapon name = {{weapon.name}}</p>
+        <p>Weapon attack = {{weapon.attack}}</p>
+        <p>Weapon price = {{weapon.price}}</p>
+        {% if weapon.price < 10000 %}
+        <p>This weapon is cheap</p>
+        {% else %}
+        <p>This weapon is expensive</p>
+        {% endif %}
+        {% endfor %}
     </body>
 </html>
