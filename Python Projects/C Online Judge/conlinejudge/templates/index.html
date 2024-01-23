@@ -101,7 +101,8 @@
 
         <div id="codeForm">
             <h2>Code Submission</h2>
-            <form action="#" method="post" onsubmit="submitCode(event)">
+            <form action="" method="post">
+                {% csrf_token %}
                 <label for="code">Your C Code:</label>
                 <textarea id="code" name="code" required></textarea>
 
@@ -110,29 +111,8 @@
         </div>
         <h2 id="outputTitle">Output</h2>
         <div id="output">
-            
-            <pre id="outputText"></pre>
+            <pre id="outputText">{{output}}</pre>
         </div>
     </div>
-
-    <script>
-        function submitCode(event) {
-            // Prevent the form from actually submitting (we'll handle it with JavaScript)
-            event.preventDefault();
-
-            // Get the user's code from the form
-            var userCode = document.getElementById("code").value;
-
-            // Send the userCode to the backend for execution and judging
-            // You would typically use AJAX to send the code to the server
-            // and receive the output.
-
-            // For the sake of this example, we'll just display a message.
-            var outputText = "Code submitted. Output will be shown here after judging.";
-
-            // Display the output
-            document.getElementById("outputText").textContent = outputText;
-        }
-    </script>
 </body>
 </html>
