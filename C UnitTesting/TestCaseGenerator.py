@@ -30,7 +30,7 @@ def generate_test_cases(correct_c_program, num_inputs, output_file):
 correct_c_program = 'Answer.c'
 
 # Define the number of random inputs to generate
-num_inputs = 20  # You can adjust this value
+num_inputs = 100  # You can adjust this value
 
 # Define the output file for storing test cases
 output_file = 'test_cases.json'
